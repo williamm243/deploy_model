@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>housing price</title>
+</head>
+<body style="background-color: #0ba195a1;"> 
+    <div class="login">
+        <h1 style="color: blueviolet;">nyumba future</h1>
+
+        <form action="{{ url_for('predict')}}" method="post"></form>
+        <input type="text"name= "area" placeholder="amount of area you desire" required="required/"><br>
+        <input type="text"name= "bedroom" placeholder="number of bedrooms you want" required="required/"><br>
+        <input type="text"name= "bathroom" placeholder="bathroom you need" required="required/"><br>
+        <input type="text"name= "stories" placeholder="number of stories" required="required/"><br>
+        <input type= "text" name= "parking" placeholder="cars to park" required="required/"><br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn.primary btn-block btn-large">price for my future house</button>
+
+        <br>
+        <br>
+        <h4 style="color: black;">{{ prediction_text }}</h4>
+
+
+    </div>
+    
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Price Estimation</title>
+</head>
+<body style="background: #1966bd;">
+    <div class="login">
+        <h1 style="color:violet;">
+            House Price Prediction
+        </h1>
+
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <input type="text" name="Square footage" placeholder="Sqr-ft" required="required"><br>
+            <input type="text" name="Bedrooms" placeholder="No. of rooms" required="required"><br>
+            <input type="text" name="Bathrooms" placeholder="No. of bathrooms" required="required"><br>
+            <input type="text" name="Storeys" placeholder="No. of storeys" required="required"><br>
+            <input type="text" name="Parking" placeholder="No. of cars" required="required"><br>
+
+            <p>
+                <button type="submit" class="btn btn-primary btn-block btn-large">
+                Predicted Price
+                </button>
+            </p>
+
+        </form>
+
+        <br>
+        <br>
+
+        <h4 style="color: white;">
+            {{ prediction_text }}
+        </h4>
+
+    </div>
+</body>
+</html>
